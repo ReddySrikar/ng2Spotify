@@ -1,0 +1,25 @@
+<div class="container">
+<h1>Search for your favourite artists: </h1>
+<p class="lead">Search for absolutely liiiiiit artists in town!!</p>
+<form>
+  <div class="form-group">
+    <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchArtist()" class="form-control" placeholder="Type an artists name here...">
+  </div>
+</form>
+
+    <div *ngIf="setArtists">
+        <div *ngFor="let artist of setArtists">
+            <div class="row">
+                <div class=""col-md-12>
+                    <div class="search-res well">
+                    <h4><a href="#">{{ artist.name }}</a></h4>
+                        <div>
+                            <strong>Genres: </strong>
+                            <span *ngFor="let gnr of artist.genres">{{ gnr }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
