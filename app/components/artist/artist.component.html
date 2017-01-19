@@ -1,0 +1,9 @@
+<div *ngIf="artist">
+  <header class="artist-header">
+    <div *ngIf="artist.images.length > 0">
+      <img class="artist-thumbnail" src="{{artist.images[0].url}}"/>
+    </div>
+  </header>
+  {{ artist.name }}
+</div>
+

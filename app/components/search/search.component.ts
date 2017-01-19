@@ -26,7 +26,7 @@ export class SearchComponent  {
   }
 }
 
-interface artist{
+export interface artist{
   id: number;
   name: string;
   genres: any;

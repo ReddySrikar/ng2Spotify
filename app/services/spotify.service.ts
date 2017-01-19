@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 export class SpotifyService{
 
     private searchUrl: string;
+    private artistUrl: string;
 
     constructor(private _http: Http){
     }
@@ -18,4 +19,12 @@ export class SpotifyService{
 
         return this._http.get(this.searchUrl).map(res => res.json());
     }
+
+    loadArtist(id: string){
+        this.artistUrl = "https://api.spotify.com/v1/artists/"+id;
+
+       return this._http.get(this.artistUrl).map(res => res.json());
+    }
+
+    l
 }
