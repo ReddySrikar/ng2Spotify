@@ -1,7 +1,13 @@
 .artist-thumbnail{
   border-bottom: darkgray;
-  height:10%;
-  width:10%;
-  min-height: 80px;
-  min-width: 80px;
+  height:auto;
+  max-height: 80px;
+  max-width: 80px;
+  float: left;
+}
+
+.artist-header{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
 }
