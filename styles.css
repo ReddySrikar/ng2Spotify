@@ -1,8 +1,16 @@
-.artist-thumbnail{
+.artist-thumbnail {
   border-bottom: darkgray;
   height:auto;
   max-height: 80px;
   max-width: 80px;
+  float: left;
+}
+
+.album-image {
+  border-bottom: darkgray;
+  height:auto;
+  max-height: 200px;
+  max-width: 200px;
   float: left;
 }
 
@@ -34,4 +42,8 @@
 
 .album-thumbnail{
   width: 100%;
+}
+
+button .preview{
+  float: right;
 }

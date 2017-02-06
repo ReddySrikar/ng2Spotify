@@ -1,15 +1,24 @@
-<h1>Album Component</h1>
 <div class="container">
   <div *ngIf="album">
-    <header class="artist-header">
+    <header class="album-header">
       <div *ngIf="album.images.length > 0">
-        <img class="artist-thumbnail img-circle" src="{{album.images[0].url}}"/>
+        <img class="album-image" src="{{album.images[0].url}}"/>
       </div>
 
       <h1>{{ album.name }}</h1>
-      <p *ngIf="album.genres.length > 0">
-        Genres: <span *ngFor="let albgen of album.genres">{{ artgen }}</span>
+      <p *ngIf="album.artists.length > 0">
+        Artists: <span *ngFor="let albart of album.artists">{{ albart.name }}</span>
       </p>
     </header>
+    <div class="tracks-holder">
+      <div class="row">
+        <div class="col-md-12">
+          <div *ngFor="let track of album.tracks.items" class="tracks well">
+            {{track.track_number}}{{ track.name}}
+            <button class="btn btn-success preview">Preview on Spotify!!</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
