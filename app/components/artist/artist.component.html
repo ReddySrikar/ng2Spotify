@@ -11,8 +11,20 @@
   </p>
   </header>
 
-  <div *ngFor="let album of albums">
-    {{ album.name }}
+  <div class="artist-album">
+  <div class="row">
+    <div *ngFor="let album of albums">
+      <div class="col-md-3">
+        <div class="well album">
+          <div *ngIf="album.images.length">
+            <img class="album-thumbnail img-thumbnail" src="{{album.images[0].url}}">
+          </div>
+          <h3>{{ album.name }}</h3>
+          <button class="btn btn-success btn-block"><a routerLink="/album/{{album.id}}">Proceed to Album</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 </div>

@@ -11,3 +11,27 @@
   margin-bottom: 20px;
   border-bottom: 2px solid white;
 }
+
+.album-thumbnail{
+  border-bottom: darkgray;
+  height: 60px;
+  width: 60px;
+}
+
+.artist-album .well{
+  color: #778899;
+  overflow: auto;
+  margin-bottom: 20px;
+  height: 400px;
+}
+
+.album{
+  text-align: center;
+  background: #333;
+  padding: 10px 20px;
+  border: grey 1px solid;
+}
+
+.album-thumbnail{
+  width: 100%;
+}
